@@ -1,0 +1,17 @@
+<template name="navBar">
+    <div class="navbar navbar-default">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li role="presentation" class="{{activeIfTemplateIs 'Toc'}}"><a href="/toc">Table of Contents</a></li>
+                <li role="presentation" class="{{activeIfTemplateIs 'Preface'}}"><a href="/">Preface</a></li>
+                <li role="presentation" class="{{activeIfTemplateIs 'Intro'}}"><a href="/intro">Introduction</a></li>
+                <li role="presentation" class="{{activeIfTemplateIs 'Compendium'}}"><a href="/compendium">Compendium</a></li>
+                <li role="presentation" class="{{activeIfTemplateIs 'ChartA'}}"><a href="/chartA">Chart A (Database)</a></li>
+                <li role="presentation" class="{{activeIfTemplateIs 'ChartBF'}}"><a href="/chartBF">Charts B-F</a></li>
+                <li role="presentation" class="{{activeIfTemplateIs 'Conclusion'}}"><a href="/conclusion">Conclusion</a></li>
+                <li role="presentation" class="{{activeIfTemplateIs 'Appendices'}}"><a href="/appendices">Appendices</a></li>
+                <li role="presentation" class="{{activeIfTemplateIs 'Biblio'}}"><a href="/biblio">Bibliography</a></li>
+            </ul>
+        </div>
+    </div>
+</template>
