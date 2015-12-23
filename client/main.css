@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1000px;
@@ -34,7 +39,13 @@ h1,h2,h3,h4,h5,h6 {
 
 h3 {
   font-family: Georgia,serif;
+  font-size: 18px;
   font-weight: normal;
+  margin: 5px 0 0;
+}
+
+.post h3 {
+  color: #8c707c;
 }
 
 #header {
@@ -59,4 +70,21 @@ h3 {
 
 .post .storycontent, .post .content {
   line-height: 1.5;
+}
+
+.post table {
+  border: medium none;
+  border-collapse: collapse;
+}
+
+.post th, .post td {
+  border-bottom: 1px solid #eeeeee;
+  border-left: medium none;
+  border-right: medium none;
+  font-family: Verdana,Geneva,sans-serif;
+  font-size: 90%;
+  font-weight: normal;
+  padding: 2px 10px;
+  text-align: left;
+  vertical-align: top;
 }
