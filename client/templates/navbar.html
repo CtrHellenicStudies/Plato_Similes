@@ -7,10 +7,33 @@
                 <li role="presentation" class="{{activeIfTemplateIs 'Intro'}}"><a href="/intro">Introduction</a></li>
                 <li role="presentation" class="{{activeIfTemplateIs 'Compendium'}}"><a href="/compendium">Compendium</a></li>
                 <li role="presentation" class="{{activeIfTemplateIs 'ChartA'}}"><a href="/chartA">Chart A (Database)</a></li>
-                <li role="presentation" class="{{activeIfTemplateIs 'ChartBF'}}"><a href="/chartBF">Charts B-F</a></li>
+                <li role="presentation" class="{{activeIfTemplateInChart}} dropdown"><a href="#"
+                                                                                             class="dropdown-toggle"
+                                                                                             data-toggle="dropdown">Charts B-F</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/chartB">Chart B</a></li>
+                        <li><a href="/chartC">Chart C</a></li>
+                        <li><a href="/chartD">Chart D</a></li>
+                        <li><a href="/chartE">Chart E</a></li>
+                        <li><a href="/chartF">Chart F</a></li>
+                    </ul>
+                </li>
                 <li role="presentation" class="{{activeIfTemplateIs 'Conclusion'}}"><a href="/conclusion">Conclusion</a></li>
-                <li role="presentation" class="{{activeIfTemplateIs 'Appendices'}}"><a href="/appendices">Appendices</a></li>
+                <li role="presentation" class="{{activeIfTemplateInAppendix}} dropdown"><a href="#"
+                                                                                                class="dropdown-toggle"
+                                                                                                data-toggle="dropdown">Appendices</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/appendixI">Appendix I</a></li>
+                        <li><a href="/appendixII">Appendix II</a></li>
+                        <li><a href="/appendixIII">Appendix III</a></li>
+                        <li><a href="/appendixIV">Appendix IV</a></li>
+                    </ul>
+                </li>
                 <li role="presentation" class="{{activeIfTemplateIs 'Biblio'}}"><a href="/biblio">Bibliography</a></li>
+            </ul>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
             </ul>
         </div>
     </div>
