@@ -1,0 +1,64 @@
+<template name="chartA">
+    <div id="wrapper">
+        <div id="content-wrapper">
+            <div id="content">
+                <div class="post">
+                    <div class="storycontent">
+                        <div class="wrap pdb-list pdb-instance-1 participants-database">
+                            {{>ChartA }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="ChartA">
+    <h1 id="post-107">Chart A (Database) Search</h1>
+    <div class="clear"></div>
+    <form id="search_form">
+        <div class="pdb-searchform">
+            <div class="pdb-error pdb-search-error" style="display:none">
+                <p class="search_field_error">Please select a column to search in.</p>
+                <p class="value_error">Please type in something to search for.</p>
+            </div>
+            <fieldset class="widefat">
+                <h3>Search:</h3>
+                <select id="search_field" name="search_field" class="search-item">
+                    <option value="none" selected="selected">(select)</option>
+                    <option value="dialogue_passages">Dialogue Passages</option>
+                    <option value="tenor">Tenor</option>
+                    <option value="prothesis">Prothesis</option>
+                    <option value="vehicle">Vehicle</option>
+                    <option value="speaker">Speaker</option>
+                </select>
+                <input id="search_term" type="text" name="search_term" class="search-item" value="">
+                <input name="submit_button" type="submit" value="Search">
+                <input name="clear_button" type="button" id="clear_button" value="Clear">
+            </fieldset>
+        </div>
+    </form>
+    <form id="sort_form">
+        <fieldset class="widefat">
+            <h3>Sort by:</h3>
+            <select id="sortby" name="sortBy" class="search-item">
+                <option value=""></option>
+                <option value="dialogue_passages"  >Dialogue Passages</option>
+                <option value="tenor"  >Tenor</option>
+                <option value="prothesis"  >Prothesis</option>
+                <option value="vehicle"  >Vehicle</option>
+                <option value="speaker"  >Speaker</option>
+            </select>
+            <span class="radio-group" >
+            <label class="checkbox inline search-item" for="ascdesc-asc">
+                <input name="ascdesc" id="ascdesc-asc" type="radio"   value="-1" />
+                Ascending</label>
+            <label class="checkbox inline search-item" for="ascdesc-desc">
+                <input name="ascdesc" checked="checked"  id="ascdesc-desc" type="radio" value="1" />
+                Descending</label>
+            </span>
+            <input name="submit_button" type="submit" value="Sort" /></fieldset></form>
+    {{>pages }}
+    {{>pagesNav }}
+</template>
