@@ -5,7 +5,7 @@ Template.ChartA.events({
         var search_field = event.target.search_field.value;
         var search = {};
         search[search_field] = new RegExp(search_term);
-        if(!_.isEmpty(search_term)) {
+        if(!_.isEmpty(search_term) && search_field != 'none') {
             Pages.set("filters", search);
         }
     },
@@ -15,7 +15,7 @@ Template.ChartA.events({
         var direction = event.target.ascdesc.value;
         var sort = {};
         sort[sortby] = parseInt(direction);
-        if(!_.isEmpty(sort)) {
+        if(!_.isEmpty(sort) && sortby != 'none') {
             Pages.set("sort", sort);
         }
     },
