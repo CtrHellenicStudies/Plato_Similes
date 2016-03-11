@@ -88,3 +88,8 @@ h3 {
   text-align: left;
   vertical-align: top;
 }
+
+.search-button {
+  vertical-align: top;
+  line-height: 25px;
+}

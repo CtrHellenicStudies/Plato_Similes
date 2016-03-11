@@ -34,8 +34,8 @@
                     <option value="speaker">Speaker</option>
                 </select>
                 <input id="search_term" type="text" name="search_term" class="search-item" value="">
-                <input name="submit_button" type="submit" value="Search">
-                <input name="clear_button" type="button" id="clear_button" value="Clear">
+                <input name="submit_button" class="search-button" type="submit" value="Search">
+                <input name="clear_button" class="search-button" type="button" id="clear_button" value="Clear">
             </fieldset>
         </div>
     </form>
@@ -43,22 +43,24 @@
         <fieldset class="widefat">
             <h3>Sort by:</h3>
             <select id="sortby" name="sortBy" class="search-item">
-                <option value="none"></option>
+                <option value="none">(select)</option>
                 <option value="dialogue_passages"  >Dialogue Passages</option>
                 <option value="tenor"  >Tenor</option>
                 <option value="prothesis"  >Prothesis</option>
                 <option value="vehicle"  >Vehicle</option>
                 <option value="speaker"  >Speaker</option>
             </select>
+            <input name="submit_button" class="search-button" type="submit" value="Sort" />
+            <br/>
             <span class="radio-group" >
-            <label class="checkbox inline search-item" for="ascdesc-asc">
-                <input name="ascdesc" id="ascdesc-asc" type="radio"   value="-1" />
+            <label class="checkbox inline search-button" for="ascdesc-asc">
+                <input name="ascdesc" id="ascdesc-asc" class="search-button" type="radio"   value="-1" />
                 Ascending</label>
-            <label class="checkbox inline search-item" for="ascdesc-desc">
-                <input name="ascdesc" checked="checked"  id="ascdesc-desc" type="radio" value="1" />
+            <label class="checkbox inline search-button" for="ascdesc-desc">
+                <input name="ascdesc" checked="checked" class="search-button" id="ascdesc-desc" type="radio" value="1" />
                 Descending</label>
             </span>
-            <input name="submit_button" type="submit" value="Sort" /></fieldset></form>
+            </fieldset></form>
     {{>pages }}
     {{>pagesNav }}
 </template>
