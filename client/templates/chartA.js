@@ -9,10 +9,10 @@ Template.ChartA.events({
             Pages.set("filters", search);
         }
     },
-    "submit #sort_form": function(event) {
+    "submit #sort_form": function(event, template) {
         event.preventDefault();
         var sortby = event.target.sortby.value;
-        var direction = event.target.ascdesc.value;
+        var direction = $('input[name="ascdesc"]:checked', event.target).val();
         var sort = {};
         sort[sortby] = parseInt(direction);
         if(!_.isEmpty(sort) && sortby != 'none') {
